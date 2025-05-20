@@ -6,10 +6,11 @@
             justify-content: center;
             align-items: center;
             height: 100vh;
-            margin: 0;
-            background-color: #f0f0f0;
+            margin: 20px;
+            background-color: #161616;
             font-family: Arial, sans-serif;
             flex-wrap: wrap;
+color: white;
             text-align: center;
         }
         .video-container {
@@ -32,15 +33,16 @@
 <body>
     <!-- First Video -->
 <div class="video-container">
-<video width="800" controls>
+        <video width="800" controls>
         <source src="rootshell1.mp4"
                type="video/mp4" class="vid">
         </video>
 <font face=arial>How to get a rootshell on Solaris 11.4 with no special privileges</font>
    </div>
+
     <!-- Second Video -->
      <div class="video-container">
-<video width="800" controls>
+     <video width="800" controls>
         <source src="rootshell2.mp4"
                type="video/mp4" class="vid">
         </video>
@@ -49,7 +51,7 @@
 
     <!-- Third Video -->
       <div class="video-container">
-<video width="800" controls>
+ <video width="800" controls>
         <source src="rootshell3.mp4"
                type="video/mp4" class="vid">
         </video>
@@ -58,15 +60,14 @@
 
     <!-- Fourth Video -->
      <div class="video-container">
-<video width="800" controls>
+  <video width="800" controls>
         <source src="rootshell4.mp4"
                type="video/mp4" class="vid">
         </video>
 <font face=arial>How to get a rootshell by hijacking the $PATH environment variable</font>
     </div>
 
-
-    <script>
+<script>
         document.addEventListener('DOMContentLoaded', () => {
             // Select all video containers
             const videoContainers = document.querySelectorAll('.video-container');
@@ -95,5 +96,6 @@
             });
         });
     </script>
+
 </body>
 </html>
