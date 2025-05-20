@@ -1,1 +1,1 @@
-<a href="https://carls0n.github.io/rootshells.github.io/">View rootshell videos here</a>
+<a href="https://carls0n.github.io/rootshells.github.io/">View rootshell videos here</a> - Use Chrome to view videos!
