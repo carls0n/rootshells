@@ -1,0 +1,131 @@
+<html>
+<head>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f0f0f0;
+            font-family: Arial, sans-serif;
+            flex-wrap: wrap; /* Allows videos to wrap in multiple rows */
+        }
+        .video-container {
+            position: relative;
+            width: 800px;
+            margin: 20px;
+            overflow: hidden;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+        .video-container:hover {
+            transform: scale(1.02);
+        }
+        .vid {
+            width: 100%;
+            display: block;
+        }
+        .overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            opacity: 1;
+            transition: opacity 0.3s ease;
+        }
+        .overlay-text {
+            color: white;
+            font-size: 24px;
+            text-align: center;
+        }
+        .video-container:hover .overlay {
+            opacity: 0;
+        }
+    </style>
+</head>
+<body>
+    <!-- First Video -->
+     <div class="video-container">
+  <div class="overlay">
+            <div class="overlay-text">How to get a rootshell on Solaris 11.4</div>
+        </div>
+<video width="800" controls>
+     <!--   <source src="https://raw.githubusercontent.com/carls0n/rootshells.github.io/main/rootshell1.mp4"
+               type="video/mp4" class="vid">-->
+<source src="rootshell1.mp4"
+               type="video/mp4" class="vid">
+        </video>
+    </div>
+
+    <!-- Second Video -->
+     <div class="video-container">
+  <div class="overlay">
+            <div class="overlay-text">How to get a rootshell using LD_PRELOAD</div>
+        </div>
+<video width="800" controls>
+        <source src="rootshell2.mp4"
+               type="video/mp4" class="vid">
+        </video>
+    </div>
+
+    <!-- Third Video -->
+      <div class="video-container">
+  <div class="overlay">
+            <div class="overlay-text">How to get a rootshell using NMAP</div>
+        </div>
+<video width="800" controls>
+        <source src="rootshell3.mp4"
+               type="video/mp4" class="vid">
+        </video>
+    </div>
+
+    <!-- Fourth Video -->
+     <div class="video-container">
+  <div class="overlay">
+            <div class="overlay-text">How to get a rootshell by hijacking $PATH</div>
+        </div>
+<video width="800" controls>
+        <source src="rootshell4.mp4"
+               type="video/mp4" class="vid">
+        </video>
+    </div>
+
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // Select all video containers
+            const videoContainers = document.querySelectorAll('.video-container');
+
+            videoContainers.forEach((videoContainer) => {
+                const video = videoContainer.querySelector('.vid');
+                const overlay = videoContainer.querySelector('.overlay');
+
+                // Function to play video
+                function playVideo() {
+                    video.play();
+                    overlay.style.opacity = '0';
+                }
+
+                // Function to pause video
+                function pauseVideo() {
+                    video.pause();
+                    overlay.style.opacity = '1';
+                }
+
+                // Add event listeners for hover and touch support
+                videoContainer.addEventListener('mouseenter', playVideo);
+                videoContainer.addEventListener('mouseleave', pauseVideo);
+                videoContainer.addEventListener('touchstart', playVideo);
+                videoContainer.addEventListener('touchend', pauseVideo);
+            });
+        });
+    </script>
+</body>
+</html>
