@@ -65,37 +65,43 @@ pointer-events: none;
 
 
     <!-- Second Video -->
-     <div class="video-container">
-  <div class="overlay">
-            <div class="overlay-text">How to get a rootshell using LD_PRELOAD</div>
-        </div>
-<video width="800" controls>
-        <source src="https://raw.githubusercontent.com/carls0n/rootshells.github.io/main/rootshell2.mp4"
+     <div class="video-container" style="position: relative;">
+  <video width="800" controls class="vid">
+      <source src="https://raw.githubusercontent.com/carls0n/rootshells.github.io/main/rootshell2.mp4"
                type="video/mp4" class="vid">
-        </video>
-    </div>
+    Your browser does not support the video tag.
+  </video>
+  <div class="overlay">
+    <div class="overlay-text">How to get a rootshell using LD_PRELOAD</div>
+  </div>
+</div>
+
 
     <!-- Third Video -->
-      <div class="video-container">
-  <div class="overlay">
-            <div class="overlay-text">How to get a rootshell using NMAP</div>
-        </div>
-<video width="800" controls>
-       <source src="https://raw.githubusercontent.com/carls0n/rootshells.github.io/main/rootshell3.mp4"
+    <div class="video-container" style="position: relative;">
+  <video width="800" controls class="vid">
+      <source src="https://raw.githubusercontent.com/carls0n/rootshells.github.io/main/rootshell3.mp4"
                type="video/mp4" class="vid">
-        </video>
-    </div>
+    Your browser does not support the video tag.
+  </video>
+  <div class="overlay">
+    <div class="overlay-text">How to get a rootshell using NMAP</div>
+  </div>
+</div>
+
 
     <!-- Fourth Video -->
-     <div class="video-container">
-  <div class="overlay">
-            <div class="overlay-text">How to get a rootshell by hijacking $PATH</div>
-        </div>
-<video width="800" controls>
-         <source src="https://raw.githubusercontent.com/carls0n/rootshells.github.io/main/rootshell4.mp4"
+  <div class="video-container" style="position: relative;">
+  <video width="800" controls class="vid">
+      <source src="https://raw.githubusercontent.com/carls0n/rootshells.github.io/main/rootshell1.mp4"
                type="video/mp4" class="vid">
-        </video>
-    </div>
+    Your browser does not support the video tag.
+  </video>
+  <div class="overlay">
+    <div class="overlay-text">How to get a rootshell by hijacking $PATH </div>
+  </div>
+</div>
+
 
 
     <script>
@@ -118,12 +124,7 @@ pointer-events: none;
                     video.pause();
                     overlay.style.opacity = '1';
                 }
-
-                // Add event listeners for hover and touch support
-                videoContainer.addEventListener('mouseenter', playVideo);
-                videoContainer.addEventListener('mouseleave', pauseVideo);
-                videoContainer.addEventListener('touchstart', playVideo);
-                videoContainer.addEventListener('touchend', pauseVideo);
+              
             });
         });
     </script>
