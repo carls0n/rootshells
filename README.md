@@ -23,6 +23,6 @@ How to get a rootshell using NMAP
 
 https://github.com/user-attachments/assets/64da4d11-7bfa-425e-80ec-ce185bbbb8d9
 
-How to get a rootshell by hijacking $PATH
+How to get a rootshell by hijacking PATH
 ***
 
